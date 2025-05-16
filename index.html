@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tradutor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="translator-container">
+        <h1>Tradutor 🌐</h1>
+
+        <div class="controls">
+            <div class="language-select-group">
+                <label for="source-lang">Traduzir de:</label>
+                <select id="source-lang">
+                    <option value="auto">Detectar Idioma</option>
+                    {/* As opções de idioma serão preenchidas pelo JavaScript */}
+                </select>
+            </div>
+            <button id="swap-languages" title="Inverter idiomas">⇆</button>
+            <div class="language-select-group">
+                <label for="target-lang">Para:</label>
+                <select id="target-lang">
+                    {/* As opções de idioma serão preenchidas pelo JavaScript */}
+                </select>
+            </div>
+        </div>
+
+        <div class="text-areas">
+            <textarea id="input-text" placeholder="Digite o texto para traduzir..."></textarea>
+            <textarea id="output-text" placeholder="Tradução..." readonly></textarea>
+        </div>
+
+        <button id="translate-btn">Traduzir</button>
+        <p id="char-count">0/500</p>
+        <p id="error-message" class="error"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
